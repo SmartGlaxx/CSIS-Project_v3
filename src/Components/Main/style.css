@@ -1,0 +1,190 @@
+h3{
+    margin: 0.3rem;
+}
+
+.background{
+    background-color: none;
+    font-size: 15rem;
+    font-weight: 900;
+    position: fixed;
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+.cellBoard{
+    /* width: calc(100% - 0.1rem); */
+    /* background: linear-gradient(to top, #222, #223); */
+    background: linear-gradient(to top, rgba(34,34,34, 0.97), rgba(34,34,51, 0.9));
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: grid; 
+    grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+    overflow: hidden;
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
+}
+
+.topLeft-item{
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.token1, .token2, .token3, .token4{
+    width: 9%;
+    height: auto;
+    position: absolute;
+}
+.token1, .token3{
+    left:2.5rem
+}
+.token2, .token4{
+    margin-right: -2.5rem
+}
+
+.token-pic-1, .token-pic-2, .token-pic-3, .token-pic-4{
+    width: 5rem;
+    height: 5rem;
+    left:2.5rem
+}
+
+.newClass{
+    right: 0 
+}
+.tokenSpace{
+    margin-left: 2.5rem;
+}
+.defaultClass2{
+    right: 0;
+}
+.defaultClass3{
+    bottom: 0;
+    left:2.5rem
+}
+.defaultClass4{
+    bottom: 0;
+    right: 0;
+    
+}
+.board-options1{
+    position: absolute;
+    z-index:-10;
+}
+.board-options2{
+    position: absolute;
+    transform:translate(50vw)
+}
+.board-options3{
+    position: absolute;
+    transform:translate(-50vw)
+}
+.board-options4{
+    position: absolute;
+    transform:translate(50vw)
+}
+
+.select-option{
+    /* background: rgba(60, 121, 213, 8);
+    background-color: rgba(42, 57, 57, 0.7); */
+    width: 10rem;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px black;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    transform: translate(-2.5rem, -6rem);
+background-color: rgba(42, 57, 57, 0.9);
+box-shadow: 0 2px 3px 0 rgba( 31, 38, 45, 0.37 );
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.alt-move{
+    transform: translate(-2.5rem, -10rem);
+}
+
+.move-btn{
+    background-color: blue;
+    color: #eee;
+    display: block;
+    width: 4rem;
+    cursor: pointer;
+    margin: 0.1rem 0;
+    border: none;
+    border-radius: 0.3rem;
+}
+.cancel-btn{
+    background-color: rgb(0, 0, 0);
+    color: #eee;
+    display: block;
+    width: 4rem;
+    cursor: pointer;
+    margin: 0.1rem 0;
+    border: none;
+    border-radius: 0.3rem;
+}
+.drop-btn{
+    background-color: green;
+    color: #eee;
+    display: block;
+    width: 4rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 0.3rem;
+    margin-left: 3rem;
+}
+
+.move-btn:hover, .cancel-btn:hover, .drop-btn:hover{
+    box-shadow: 0px 2px 2px #111;
+    color: #fff;
+}
+/* sidebar */
+.sidebar{
+    height: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    /* width: 2rem; */
+    /* background-color: rgba(36,50,66,0.9); */
+    background-color: rgba(42, 57, 57, 0.7);
+    display: grid;
+    place-items: center;
+    z-index: 10;
+    cursor: pointer;
+    transition: all 5s;
+}
+.sidebar:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+.sideboard{
+    width: 15rem;
+    position: absolute;
+    right: 0;
+    font-size: 0.9rem;
+    background-color: rgba(42, 57, 57, 0.7);
+    padding: 1rem;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.toggle-btn{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.credit{
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
