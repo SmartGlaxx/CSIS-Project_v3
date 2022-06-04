@@ -3,13 +3,15 @@ import "./style.css"
 import { CellData } from "./cells";
 import { Object1 } from "./object1";
 import { Object2 } from "./object2";
+import { Object3 } from "./object3";
 import { UseAppContext } from "../../context";
 
 import { FaBars, FaBorderAll, FaImage, FaToggleOn, FaToggleOff } from "react-icons/fa";
 
 const Main2 = ()=>{
-    const {checkDistanceAToB,setRefValue,AToB, moveXBy1, token1XPos, token1YPos, token2XPos, token2YPos,
-        setMoveXBy1, setMoveYBy1, setMoveXBy2, setMoveYBy2} = UseAppContext()
+    const {checkDistanceAToB,checkDistanceAToC, setRefValue,AToB, AToC, moveXBy1, token1XPos, token1YPos, token2XPos, token2YPos,
+        setMoveXBy1, setMoveYBy1, setMoveXBy2, setMoveYBy2, 
+        setMoveXBy3, setMoveYBy3} = UseAppContext()
     const [sideboard, setSideBoard] = useState(false)
    
     // useEffect(()=>{
@@ -17,6 +19,7 @@ const Main2 = ()=>{
     // },[AToB])
     const showRefValue =(value)=>{
         checkDistanceAToB()
+        checkDistanceAToC()
         //setSideBoard(false)
         const selected = document.querySelector(`#${value}`);
         
@@ -25,11 +28,14 @@ const Main2 = ()=>{
 
         setMoveXBy2(selected)
         setMoveYBy2(selected)
+
+        setMoveXBy3(selected)
+        setMoveYBy3(selected)
        
         // setMoveXBy2(Math.round(selected.getBoundingClientRect().x))
         // setMoveYBy2(Math.round(selected.getBoundingClientRect().y))
 
-        checkDistanceAToB()
+        // checkDistanceAToB()
 }
 
 
@@ -51,6 +57,7 @@ const setSideBoardValue =()=>{
          
     <Object1 />
     <Object2 />
+    <Object3 />
     <div className="sidebar" onClick={setSideBoardValue}>
         <FaBars />
     </div>
@@ -62,6 +69,12 @@ const setSideBoardValue =()=>{
             <div>Direct distance: {AToB.main}</div>
             <div>Distance on X-Axis: {AToB.x}</div>
             <div>Distance on Y-Axis: {AToB.y}</div>
+        </article><br/>
+        <article>
+            <strong>A to C</strong>
+            <div>Direct distance: {AToC.main}</div>
+            <div>Distance on X-Axis: {AToC.x}</div>
+            <div>Distance on Y-Axis: {AToC.y}</div>
         </article><br/>
         </aside>
     </div>

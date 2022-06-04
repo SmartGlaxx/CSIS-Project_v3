@@ -6,8 +6,8 @@ import { UseAppContext } from "../../context"
 
 export const Object1 = ()=>{
     const {options1Value1,setOptions1Value1, token1XPos, setToken1XPos,
-        token1YPos, setToken1YPos, token2XPos, token2YPos, AToB, setAToB,
-        moveXBy1, moveYBy1, checkDistanceAToB} = UseAppContext()
+        token1YPos, setToken1YPos, token2XPos, token2YPos, token3XPos, token3YPos, 
+        AToB, AToC, setAToB, moveXBy1, moveYBy1, checkDistanceAToB,checkDistanceAToC} = UseAppContext()
     // const [moveXBy1, setMoveXBy1] = useState(0);
     // const [moveYBy1, setMoveYBy1] = useState(0);
     const [objMoveXBy1, setObjMoveXBy1] = useState(0);
@@ -31,6 +31,7 @@ const [moveToken1, setMoveToken1] = useState(false)
         setMoveToken1(true) // object to be dropped
 
         checkDistanceAToB()
+        checkDistanceAToC()
     }
 
     const setMotionObject1 = (objectID)=>{
@@ -70,7 +71,8 @@ const [moveToken1, setMoveToken1] = useState(false)
         const token1YPos = item.getBoundingClientRect().y
         setToken1YPos(token1YPos)
          checkDistanceAToB()
-        },[AToB])
+         checkDistanceAToC()
+        },[AToB, AToC])
    
     const checkDist =()=>{
         // const item = document.querySelector(`#token1`);
