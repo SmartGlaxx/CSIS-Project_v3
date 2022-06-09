@@ -30,6 +30,11 @@ h3{
     /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); */
 }
 
+.innerCells{
+    height: 100%;
+    width: 100%;
+}
+
 .topLeft-item{
     width: 5rem;
     height: 5rem;
@@ -43,7 +48,7 @@ h3{
     height: auto;
     position: absolute;
 }
-.token1, .token3{
+.token1{
     left:2.5rem
 }
 .token2, .token4{
@@ -174,6 +179,7 @@ box-shadow: 0 2px 3px 0 rgba( 31, 38, 45, 0.37 );
     font-size: 0.9rem;
     background-color: rgba(42, 57, 57, 0.7);
     padding: 1rem;
+    padding-bottom: 3rem;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
@@ -188,3 +194,20 @@ box-shadow: 0 2px 3px 0 rgba( 31, 38, 45, 0.37 );
     margin-top: 2rem;
     font-size: 0.9rem;
 }
+
+.toggle-regions{
+    width: calc(100% - 2rem);
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    margin:0 auto;
+    font-size: 1rem;
+    background-color: rgba(42, 57, 57, 0.7);
+    padding: 0.5rem;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 4px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
